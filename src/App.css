@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+/*boiler plate project set-up*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* width */
+html::-webkit-scrollbar {
+    width: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Track */
+html::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Handle */
+html::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/***************/
+
+.content {
+    height: max-content;
+    min-height: 100vh;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+input,
+select,
+div,
+span,
+a {
+    font-family: 'Heebo';
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 150px;
+    font-weight: 900;
+    font-style: italic;
+    color: rgb(32,178,178);
+}
+
+h2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+h3 {
+    font-size: 25px;
+    color: rgb(0,104,129);
+}
+
+button,
+input,
+select {
+    outline: none;
+    border: none;
+}
+
+.btn {
+    height: max-content;
+    width: max-content;
+    padding: 7.5px 30px;
+    border-radius: 25px; 
+    background-color: rgb(32,178,178);
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn:hover,
+button:hover,
+input:hover,
+select:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.btn:active,
+button:active,
+input:active,
+select:active {
+    filter: brightness(100%);
+}
+
+img {
+    object-fit: cover;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round {
+    border-radius: 5px;
+}
+
+.transition {
+    transition: all 0.15s;
+}
+
+.shadow {
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+.shadow-light {
+    box-shadow: 0px 0px 30px rgba(255,255,255,0.4);
+}
+
+.hidden {
+    display: none;
+    opacity: 0%;
+    visibility: hidden;
+    z-index: -10;
+}
+
+.selected {
+    background-color: rgb(0,104,129);
+}
+
+.title,
+.results {
+    justify-content: space-evenly;
+}
+
+.title {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(./res/background1.png);
+}
+
+.quiz {
+    justify-content: flex-start;
+    padding: 75px 0px;
+    background-image: url(./res/background2.png);
+}
+
+.quizBox {
+    height: 200px;
+    width: 60%;
+    justify-content: space-evenly;
+    margin-bottom: 75px;
+    background-color: rgba(255,255,255,0.9);
+    border: 1px solid silver;
+}
+
+.quizBox:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.quizBox-row {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.quizBox__btn--active {
+    background-color: rgb(0,104,129);
+}
+
+.results {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./res/background3.png);
 }
